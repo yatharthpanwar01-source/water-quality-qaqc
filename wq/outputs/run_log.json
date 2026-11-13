@@ -1,0 +1,82 @@
+{
+  "source": "SYNTHETIC demo (seed=42)",
+  "phys_range": [
+    0.0,
+    5000.0
+  ],
+  "outlier_rule": "rolling 31-day robust z (MAD) > 3.5",
+  "trend_method": "Mann-Kendall on deseasonalised monthly medians, Sen slope; no autocorrelation correction (limitation)",
+  "crs": "inputs EPSG:4326; map in EPSG:32617 (UTM 17N)",
+  "flag_counts": {
+    "S1": {
+      "flag_range": 10,
+      "flag_missing": 60,
+      "flag_outlier": 24,
+      "qa_pass": 2097
+    },
+    "S2": {
+      "flag_range": 10,
+      "flag_missing": 60,
+      "flag_outlier": 21,
+      "qa_pass": 2100
+    },
+    "S3": {
+      "flag_range": 10,
+      "flag_missing": 60,
+      "flag_outlier": 23,
+      "qa_pass": 2098
+    }
+  },
+  "gaps_gt7d": [
+    {
+      "station": "S1",
+      "gap_days": 61,
+      "ends": "2020-08-18"
+    },
+    {
+      "station": "S1",
+      "gap_days": 11,
+      "ends": "2022-02-19"
+    },
+    {
+      "station": "S2",
+      "gap_days": 62,
+      "ends": "2020-08-18"
+    },
+    {
+      "station": "S2",
+      "gap_days": 11,
+      "ends": "2022-02-19"
+    },
+    {
+      "station": "S3",
+      "gap_days": 61,
+      "ends": "2020-08-18"
+    },
+    {
+      "station": "S3",
+      "gap_days": 11,
+      "ends": "2022-02-19"
+    }
+  ],
+  "trends": {
+    "S1": {
+      "n_months": 71,
+      "z": 9.91,
+      "p": 0.0,
+      "sen_slope_per_year": 7.0
+    },
+    "S2": {
+      "n_months": 71,
+      "z": 9.91,
+      "p": 0.0,
+      "sen_slope_per_year": 6.86
+    },
+    "S3": {
+      "n_months": 71,
+      "z": 10.0,
+      "p": 0.0,
+      "sen_slope_per_year": 7.54
+    }
+  }
+}
